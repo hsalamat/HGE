@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="HGE">
+      <UniqueIdentifier>{99EE870B-05F8-877C-8E73-9E7CFA7B937C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\HGE.h" />
+    <ClInclude Include="src\HGE\Application.h">
+      <Filter>HGE</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGE\Core.h">
+      <Filter>HGE</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGE\EntryPoint.h">
+      <Filter>HGE</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGE\Log.h">
+      <Filter>HGE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\HGE\Application.cpp">
+      <Filter>HGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HGE\Log.cpp">
+      <Filter>HGE</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
