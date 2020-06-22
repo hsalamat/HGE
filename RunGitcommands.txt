@@ -6,4 +6,6 @@ git commit -m "Setup Logging and Premake"
 git push origin master
 REM git submodule add https://github.com/gabime/spdlog vendor/spdlog 
 REM git submodule add https://github.com/glfw/glfw vendor/GLFW
+REM git submodule add https://github.com/ocornut/imgui vendor/imgui
 REM git difftool --dir-diff
+REM git ls-files --stage projectfolder
