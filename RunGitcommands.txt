@@ -8,4 +8,7 @@ REM git submodule add https://github.com/gabime/spdlog vendor/spdlog
 REM git submodule add https://github.com/glfw/glfw vendor/GLFW
 REM git submodule add https://github.com/ocornut/imgui vendor/imgui
 REM git difftool --dir-diff
+REM git diff
 REM git ls-files --stage projectfolder
+REM git add C:\Hooman\GBC\GAME3121\Hooman Game Engine\HGE\vendor\imgui\premake5.lua
+REM git pull origin master

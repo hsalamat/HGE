@@ -8,15 +8,22 @@ namespace HGE {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+	//step8
+	Application* Application::s_Instance = nullptr;
+
 	Application::Application()
 	{
+		//step9
+		HGE_CORE_ASSERT(!s_Instance, "Application already Exists!");
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 
-		//step3
-		unsigned int id;
-		glGenVertexArrays(1, &id);
+		//step1
+		//unsigned int id;
+		//glGenVertexArrays(1, &id);
 
 	}
 
@@ -27,11 +34,15 @@ namespace HGE {
 	void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
+		//step12
+		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
 		m_LayerStack.PushOverlay(layer);
+		//step13
+		layer->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e)

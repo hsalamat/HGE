@@ -17,6 +17,9 @@ namespace HGE {
 		void PushLayer(Layer* Layer);
 		void PushOverlay(Layer* Layer);
 
+		//step7
+		inline Window& GetWindow() { return *m_Window; }
+		inline static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
@@ -24,6 +27,9 @@ namespace HGE {
 		bool m_Running = true;
 
 		LayerStack m_LayerStack;
+
+		//step6
+		static Application* s_Instance;
 	};
 
 	//To be defined in the client

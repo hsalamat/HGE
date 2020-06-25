@@ -39,9 +39,9 @@ project "GameEngine"
 		"../vendor/spdlog/include",
 	}
 
-		    postbuildcommands
+	postbuildcommands
     {
-    	("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+    	("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
     }
 
 

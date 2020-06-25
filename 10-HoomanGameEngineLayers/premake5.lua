@@ -58,9 +58,9 @@ project "GameEngine"
 		"opengl32.lib" 
 	}
 
-		    postbuildcommands
+	postbuildcommands
     {
-    	("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+    	("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
     }
 
 

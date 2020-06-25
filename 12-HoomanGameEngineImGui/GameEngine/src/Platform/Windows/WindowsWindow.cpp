@@ -5,7 +5,6 @@
 #include "HGE/Events/KeyEvent.h"
 #include "HGE/Events/MouseEvent.h"
 
-//step 1
 #include <glad/glad.h>
 
 namespace HGE {
@@ -57,7 +56,6 @@ namespace HGE {
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 
-		//step2
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		HGE_CORE_ASSERT(status, "Failed to initialize Glad!");
 

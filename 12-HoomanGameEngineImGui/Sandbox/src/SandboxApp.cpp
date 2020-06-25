@@ -30,6 +30,8 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		//step11
+		PushOverlay(new HGE::ImGuiLayer());
 	}
 	~Sandbox()
 	{
