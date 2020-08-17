@@ -22,6 +22,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "../vendor/GLFW/include"
 IncludeDir["Glad"] = "../vendor/Glad/include"
 IncludeDir["ImGui"] = "../vendor/imgui"
+IncludeDir["glm"] = "../vendor/glm"
 
 group "Dependencies"
 --this include premake file inside GLFW
@@ -46,7 +47,9 @@ project "GameEngine"
     files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"../vendor/glm/glm/**.hpp",
+		"../vendor/glm/glm/**.inl",
 	}
 
 	includedirs
@@ -55,7 +58,8 @@ project "GameEngine"
 		"../vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 	--linking static libraries
 	links
@@ -122,6 +126,7 @@ project "Sandbox"
 	{
 		"../vendor/spdlog/include",
 		"GameEngine/src",
+		"%{IncludeDir.glm}"
 	}	
 
 	links		

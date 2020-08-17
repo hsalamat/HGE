@@ -7,6 +7,7 @@ git push origin master
 REM git submodule add https://github.com/gabime/spdlog vendor/spdlog 
 REM git submodule add https://github.com/glfw/glfw vendor/GLFW
 REM git submodule add https://github.com/ocornut/imgui vendor/imgui
+REM git submodule add https://github.com/g-truc/glm vendor/glm
 REM git difftool --dir-diff
 REM git diff
 REM git ls-files --stage projectfolder
